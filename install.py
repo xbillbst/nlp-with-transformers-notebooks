@@ -47,7 +47,7 @@ def install_requirements(
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
-        ifprocess_scatter.returncode != 0:
+        if process_scatter.returncode != 0:
             raise Exception("😭 Failed to install transformers==4.13.0 datasets==2.8.0")
         else:
             print("✅ transformers==4.13.0 datasets==2.8.0 installed!")
