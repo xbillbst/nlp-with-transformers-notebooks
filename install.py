@@ -38,6 +38,7 @@ def install_requirements(
     else:
         print("✅ Git LFS installed!")
 
+    print("is_chapter:",is_chapter2)
     if is_chapter2:
         transformers_cmd = "python -m pip install transformers==4.13.0 datasets==2.8.0".split()
         process_scatter = subprocess.run(
