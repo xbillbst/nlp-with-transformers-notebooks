@@ -41,11 +41,16 @@ def install_requirements(
     print("is_chapter2:",is_chapter2)
     if is_chapter2:
         transformers_cmd = "python -m pip install transformers==4.13.0 datasets==2.8.0".split()
+        print("⏳ Installing transformers==4.13.0 datasets==2.8.0 ...")
         process_scatter = subprocess.run(
             transformers_cmd,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
+        if process_scatter.returncode == -1:
+            raise Exception("😭 Failed to install transformers==4.13.0 datasets==2.8.0")
+        else:
+            print("✅ transformers==4.13.0 datasets==2.8.0 installed!")
 
     if is_chapter6:
         transformers_cmd = "python -m pip install datasets==2.0.0".split()
