@@ -53,7 +53,7 @@ def install_requirements(
         else:
             print("✅ transformers==4.13.0 datasets==2.8.0 installed!")
             
-        transformers_cmd = "python -m pip install transformers==4.17.0 datasets==2.1.5".split()
+        transformers_cmd = "python -m pip install transformers==4.17.0 datasets==2.15.0".split()
         print("⏳ Installing transformers==4.17.0 datasets==2.15.0 ...")
         process_scatter = subprocess.run(
             transformers_cmd,
